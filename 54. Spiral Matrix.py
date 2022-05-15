@@ -1,18 +1,20 @@
 class Solution:
     def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
+        """
+Runtime: 30 ms, faster than 88.84% of Python3 online submissions for Spiral Matrix.
+Memory Usage: 13.9 MB, less than 33.71% of Python3 online submissions for Spiral Matrix.
+        """
         #print( [*zip(*matrix)] )
         #print( [*zip(*matrix)][::-1])
-        return matrix and [*matrix.pop(0)] + self.spiralOrder([*zip(*matrix)][::-1])
+        #return matrix and [*matrix.pop(0)] + self.spiralOrder([*zip(*matrix)][::-1])
+        # [*zip(*matrix)][::-1]
         
-        
-        
-        return
         top = 0
         bottom = 0
         left = 0
         right = 0
         
-        out = []#matrix[0]
+        out = []
         
         x = len(matrix[0])-1
         y = len(matrix)-1
